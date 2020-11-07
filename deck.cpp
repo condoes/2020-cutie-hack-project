@@ -14,18 +14,18 @@ Deck::Deck() {
     setDeckSize(63);
 
     int i;
-    for (i = 0; i < 21; ++i) {
+    for (i; i < 21; ++i) {
         deck.at(i) = new Card("rock");
     }
-    for (i = 0; i < 42; ++i) {
+    for (i; i < 42; ++i) {
         deck.at(i)= new Card("paper");
     }
-    for (i = 0; i < 63; ++i) {
+    for (i; i < 63; ++i) {
         deck.at(i)= new Card("scissors");
     }
     currCard = deck.at(62);
-    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-    std::shuffle(deck.begin(), deck.end(), seed);
+    //unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    //shuffle(deck.begin(), deck.end(), seed);
 }
 void Deck::setDeckSize(int s) {
     deckSize = s;
@@ -36,4 +36,11 @@ Card* Deck::draw() {
     deckSize--;
     currCard = deck.at(deckSize);
     return temp;
+}
+
+void Deck::output_deck(){
+    for (int i=0; i < deckSize; ++i){
+        deck.at(i)->print();
+        cout << endl;
+    }
 }
