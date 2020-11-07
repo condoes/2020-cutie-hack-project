@@ -3,15 +3,17 @@
 
 #include <iostream> 
 #include <vector> 
-#include "Card.hpp"
+#include "card.hpp"
 
 using namespace std;
 
 class Deck {
     private: 
-        vector<Card> deck(63);
+        vector<Card*> deck;
+        int deckSize;
     public: 
         Deck();
+        void setDeckSize(int);
         void shuffle();
         void draw();
         bool done();

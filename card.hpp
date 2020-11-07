@@ -11,14 +11,10 @@ class Card {
     private:
         string face;
     public:
-        Card() {
-            face = "";
+        Card(string cardtype) {
+            face = cardtype;
         }
-
-        void set_value(string cardType) {
-            face = cardType;
-        }
-
+        
         string getFace() {
             return face;
         }
