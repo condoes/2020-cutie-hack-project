@@ -33,7 +33,7 @@ class Player {
         }
         void output_hand() {
             for (int i = 0; i < 5; ++i){
-                cout << "card " << i+1 ": " << playerHand.at(i)->print() << endl;
+                cout << "card " << i+1 << ": " << playerHand.at(i)->print() << endl;
             }
         }
 };
