@@ -1,4 +1,4 @@
-# 2020-cutie-hack-project
+# 2020 Cutie Hack Project
 The game is played with a deck of 63 cards - 21 each of rock, paper, and scissors. Each player receives five cards and is given one discard round. 
 Players then put a card on the table - the "head card". After a betting round, there is the showdown. The rules are the same as a normal rock, paper, 
 scissors game. In case of a tie, however, the game is switched to poker mode: whoever has more cards matching their head card wins. There are five rounds,
