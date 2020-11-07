@@ -19,7 +19,7 @@ int main() {
 
     while (p1.getWins() != 3 && p2.getWins() !=3){
             p1.setHand(d);
-            P2.setHand(d);
+            p2.setHand(d);
             //code lol
     }
 

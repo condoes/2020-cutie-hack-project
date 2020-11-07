@@ -36,6 +36,9 @@ class Player {
                 cout << "card " << i+1 << ": " << playerHand.at(i)->print() << endl;
             }
         }
+        int getWins() {
+            return this->wins;
+        }
 };
 
 #endif
