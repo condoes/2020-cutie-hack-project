@@ -7,11 +7,11 @@ using namespace std;
 
 const int size = 63;
 
-class card {
+class Card {
     private:
         string face;
     public:
-        card() {
+        Card() {
             face = "";
         }
 
