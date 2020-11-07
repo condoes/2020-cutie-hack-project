@@ -2,17 +2,21 @@
 #define _PLAYER_HPP
 
 #include <iostream>
+#include <vector>
 #include <string>
+#include "card.hpp"
 
 using namespace std;
 
 class Player {
     private:
         int wins;
-        vector<card> playerDeck;
-        
+        vector<Card*> playerDeck;
     public:
-        Player();
+        Player() {
+            wins = 0;
+       }
+        
 };
 
-#endif _PLAYER_HPP
+#endif
