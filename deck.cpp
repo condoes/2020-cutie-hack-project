@@ -31,8 +31,9 @@ void Deck::setDeckSize(int s) {
     deckSize = s;
 }
 
-Card* draw() {
+Card* Deck::draw() {
     Card* temp = currCard;
-    currCard--;
+    deckSize--;
+    currCard = deck.at(deckSize);
     return temp;
 }
