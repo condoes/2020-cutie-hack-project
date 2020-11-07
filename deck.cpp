@@ -23,9 +23,16 @@ Deck::Deck() {
     for (i = 0; i < 63; ++i) {
         deck.at(i)= new Card("scissors");
     }
+    currCard = deck.at(62);
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::shuffle(deck.begin(), deck.end(), seed);
 }
 void Deck::setDeckSize(int s) {
     deckSize = s;
+}
+
+Card* draw() {
+    Card* temp = currCard;
+    currCard--;
+    return temp;
 }

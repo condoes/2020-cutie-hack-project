@@ -11,11 +11,12 @@ class Deck {
     private: 
         vector<Card*> deck;
         int deckSize;
+        Card* currCard;
     public: 
         Deck();
         void setDeckSize(int);
         void shuffle();
-        void draw();
+        Card* draw();
         bool done();
 };
 
