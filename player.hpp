@@ -31,6 +31,11 @@ class Player {
         void incrementWin() {
             this->wins++;
         }
+        void output_hand() {
+            for (int i = 0; i < 5; ++i){
+                cout << "card " << i+1 ": " << playerHand.at(i)->print() << endl;
+            }
+        }
 };
 
 #endif
