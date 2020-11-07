@@ -1,5 +1,5 @@
-#ifndef _DECKH
-#define _DECKH
+#ifndef _CARD_H
+#define _CARD_H
 
 #include <string>
 using namespace std;
@@ -11,8 +11,10 @@ class card {
         string face;
     public:
         card();
-        ~card();
         void set_value(string);
-        string get_face();
+        string getFace();
+        string getCard();
         void print();
 };
+
+#endif
