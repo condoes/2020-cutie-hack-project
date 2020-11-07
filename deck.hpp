@@ -15,9 +15,8 @@ class Deck {
     public: 
         Deck();
         void setDeckSize(int);
-        void shuffle();
         Card* draw();
-        bool done();
+        void output_deck();
 };
 
 #endif
