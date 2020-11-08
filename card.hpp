@@ -12,11 +12,9 @@ class Card {
         Card(string cardtype) {
             face = cardtype;
         }
-
         string getFace() {
             return face;
         }
-
         void print() {
             cout << face;
         }

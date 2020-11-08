@@ -23,23 +23,46 @@ class Player {
                 playerHand.at(i) = new Card("");
             }
         }
-        void setHand(Deck d) {
+        void setHand(Deck* d) {
             for (int i = 0; i < playerHand.size(); i++) {
-                playerHand.at(i) = d.draw();
+                playerHand.at(i) = d->draw();
             } 
         }
         void incrementWin() {
             this->wins++;
         }
+        void outputWins() {
+            cout << this->wins;
+        }
         void output_hand() {
             for (int i = 0; i < 5; ++i){
-                cout << "card " << i+1 << ": ";
+                cout << "Card " << i+1 << ": ";
                 playerHand.at(i)->print(); 
                 cout << endl;
             }
         }
         int getWins() {
             return this->wins;
+        }
+        void discard(Deck* d, int n){
+            Card* newCard = d->draw();
+            playerHand.at(n-1) = newCard;
+        }
+        void output_card(int i){
+            playerHand.at(i-1)->print();
+        }
+        string getFace(int i){
+            return playerHand.at(i-1)->getFace();
+        }
+        int getNumof(int n){
+            int numCard = 0;
+            string card = playerHand.at(n-1)->getFace();
+            for (int i = 0; i < 5; i++) {
+                if (playerHand.at(i)->getFace() == card) {
+                    numCard++;
+                }
+            }   
+            return numCard;
         }
 };
 
