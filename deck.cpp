@@ -3,6 +3,10 @@
 #include <random>
 #include <chrono>
 #include <algorithm>
+#include <vector>    
+#include <ctime>        
+#include <cstdlib>
+#include <stdio.h>
 
 using namespace std;
 
@@ -13,7 +17,7 @@ Deck::Deck() {
     deck.resize(63);
     setDeckSize(63);
 
-    int i;
+    int i=0;
     for (i; i < 21; ++i) {
         deck.at(i) = new Card("rock");
     }
@@ -24,8 +28,9 @@ Deck::Deck() {
         deck.at(i)= new Card("scissors");
     }
     currCard = deck.at(62);
-    //unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-    //shuffle(deck.begin(), deck.end(), seed);
+    
+    srand(unsigned(time(0)));
+    random_shuffle(deck.begin(), deck.end());
 }
 void Deck::setDeckSize(int s) {
     deckSize = s;
