@@ -23,9 +23,9 @@ class Player {
                 playerHand.at(i) = new Card("");
             }
         }
-        void setHand(Deck* d) {
+        void setHand(Deck d) {
             for (int i = 0; i < playerHand.size(); i++) {
-                playerHand.at(i) = d->draw();
+                playerHand.at(i) = d.draw();
             } 
         }
         void incrementWin() {

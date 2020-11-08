@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     string playerName;
-    Deck* d;
+    Deck d;
     cout << "RULES OR SUM" << endl;
 
     cout << "What is your name?" << endl;
