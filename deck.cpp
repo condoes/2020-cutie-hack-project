@@ -28,7 +28,7 @@ Deck::Deck() {
         deck.at(i)= new Card("scissors");
     }
     currCard = deck.at(62);
-    
+
     srand(unsigned(time(0)));
     random_shuffle(deck.begin(), deck.end());
 }
@@ -40,6 +40,9 @@ Card* Deck::draw() {
     Card* temp = currCard;
     deckSize--;
     currCard = deck.at(deckSize);
+    cout << "CARD DRAWN IS:";
+    temp->print();
+    cout << endl;
     return temp;
 }
 

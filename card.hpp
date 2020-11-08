@@ -5,8 +5,6 @@
 #include <iostream>
 using namespace std;
 
-const int size = 63;
-
 class Card {
     private:
         string face;
@@ -14,7 +12,7 @@ class Card {
         Card(string cardtype) {
             face = cardtype;
         }
-        
+
         string getFace() {
             return face;
         }
