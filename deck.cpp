@@ -28,8 +28,9 @@ Deck::Deck() {
     }
     currCard = deck.at(62);
 
-    srand(unsigned(time(0)));
-    random_shuffle(deck.begin(), deck.end());
+    std::random_device rd;
+    std::mt19937 g(rd());
+    shuffle(deck.begin(), deck.end(), g);
 }
 void Deck::setDeckSize(int s) {
     deckSize = s;
